@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Vokabelheft</string>
+    <string name="welcome">Welcome to Vokabelheft</string>
+    <string name="choose_language">Choose learning language</string>
+    <string name="en_button">English</string>
+    <string name="de_button">Deutsch</string>
 </resources>
