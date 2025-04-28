@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.zmv.vokabelheft.screens.MainScreen
 import com.zmv.vokabelheft.ui.theme.VokabelheftTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,6 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             VokabelheftTheme {
+                MainScreen()
             }
         }
     }
@@ -30,5 +32,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TestPreview() {
     VokabelheftTheme {
+        MainScreen()
     }
 }
