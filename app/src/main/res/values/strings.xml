@@ -4,4 +4,6 @@
     <string name="choose_language">Choose learning language</string>
     <string name="en_button">English</string>
     <string name="de_button">Deutsch</string>
+    <string name="back">Back</string>
+    <string name="edit">Edit</string>
 </resources>
