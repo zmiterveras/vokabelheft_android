@@ -31,10 +31,10 @@ fun WordsPreview() {
 fun Words(navController: NavHostController, modifier: Modifier = Modifier) {
     Box(modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center) {
-        val randomItems = getRandomList("String")
+        val randomItems: List<String> = getRandomList("String")
         LazyColumn {
             items(randomItems) { randomItem ->
-                WordCell(randomItem)
+                WordCell(randomItem.toString())
                 Spacer(modifier.height(10.dp))
             }
         }
