@@ -12,10 +12,17 @@ fun MainScreen() {
 
     NavHost(
         navController = navController,
-        startDestination = NavRoutes.Welcome.route
+        startDestination = NavRoutes.AddEdit.route
     ) {
         composable(NavRoutes.Welcome.route) {
             Welcome(navController = navController)
+        }
+        composable(NavRoutes.AddEdit.route) {
+            AddEdit(navController = navController, 2, emptyList())
+        }
+
+        composable(NavRoutes.Test.route) {
+            Test(navController = navController)
         }
     }
 }
