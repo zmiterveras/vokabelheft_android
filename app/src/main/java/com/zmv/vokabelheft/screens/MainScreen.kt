@@ -12,11 +12,16 @@ fun MainScreen() {
 
     NavHost(
         navController = navController,
-        startDestination = NavRoutes.AddEdit.route
+        startDestination = NavRoutes.Words.route
     ) {
         composable(NavRoutes.Welcome.route) {
             Welcome(navController = navController)
         }
+
+        composable(NavRoutes.Words.route) {
+            Words(navController = navController)
+        }
+
         composable(NavRoutes.AddEdit.route) {
             AddEdit(navController = navController, 2, emptyList())
         }
