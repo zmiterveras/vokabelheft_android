@@ -27,7 +27,7 @@ import com.zmv.vokabelheft.R
 import com.zmv.vokabelheft.utils.getResults
 
 @Composable
-fun Results(navController: NavHostController, answers: List<Int>) {
+fun Results(navController: NavHostController, answers: List<Int>, drawing: Int) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -60,7 +60,7 @@ fun Results(navController: NavHostController, answers: List<Int>) {
         Text(text = "Comment",
             style = MaterialTheme.typography.bodyLarge)
         Spacer(modifier = Modifier.height(15.dp))
-        Image(painter = painterResource(R.drawable.bad148),
+        Image(painter = painterResource(drawing),
             contentDescription = "image")
         Spacer(modifier = Modifier.height(50.dp))
         Button(onClick = {}) {
@@ -72,5 +72,5 @@ fun Results(navController: NavHostController, answers: List<Int>) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun ResultsPreview(){
-    Results(navController = rememberNavController(), getResults())
+    Results(navController = rememberNavController(), getResults(), R.drawable.bad148)
 }
