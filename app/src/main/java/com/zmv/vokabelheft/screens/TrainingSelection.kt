@@ -9,8 +9,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.zmv.vokabelheft.composables.DropDownBox
+import com.zmv.vokabelheft.R
 
 @Composable
 fun TrainingSelection(card: Boolean = false) {
@@ -24,14 +26,14 @@ fun TrainingSelection(card: Boolean = false) {
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "Choose training mode:")
+        Text(text = stringResource(R.string.choose_training_mode))
         DropDownBox(variants)
         Row {
             Button(onClick = {}) {
-                Text(text = "choose")
+                Text(text = stringResource(R.string.choose))
             }
             Button(onClick = {}) {
-                Text(text = "cancel")
+                Text(text = stringResource(R.string.cancel))
             }
         }
     }

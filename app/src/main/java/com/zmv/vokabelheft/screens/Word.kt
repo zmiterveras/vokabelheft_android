@@ -86,7 +86,7 @@ fun PhoneticWord(phoneticWord: String) {
 @Composable
 fun TranslateWord(translateWord: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "Translate: ")
+        Text(text = stringResource(R.string.translate))
         Text(text = translateWord,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.SemiBold,
@@ -97,7 +97,7 @@ fun TranslateWord(translateWord: String) {
 @Composable
 fun VerbForms(verbForms: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "Forms of Verb:")
+        Text(text = stringResource(R.string.forms))
         Text(text = verbForms,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.SemiBold,
@@ -108,7 +108,7 @@ fun VerbForms(verbForms: String) {
 @Composable
 fun Plural(plural: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "Plural:")
+        Text(text = stringResource(R.string.plural))
         Text(text = plural,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.SemiBold,

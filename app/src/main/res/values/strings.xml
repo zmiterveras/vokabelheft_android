@@ -6,4 +6,27 @@
     <string name="de_button">Deutsch</string>
     <string name="back">Back</string>
     <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="training">Training</string>
+    <string name="delete">Delete</string>
+    <string name="translate">Translate:</string>
+    <string name="forms">Forms of Verb:</string>
+    <string name="plural">Plural:</string>
+    <string name="part">Part of speech:</string>
+    <string name="cancel">Cancel</string>
+    <string name="word">Word:</string>
+    <string name="phonetic">Phonetic:</string>
+    <string name="note_deutsch">Note: Set deutsch keyboard for special letter</string>
+    <string name="article">Article:</string>
+    <string name="time_training">Time of training:</string>
+    <string name="questions">Questions:</string>
+    <string name="right_answers">Right answers:</string>
+    <string name="wrong_answers">Wrong answers:</string>
+    <string name="to_dictionary">To dictionary</string>
+    <string name="true_label">True</string>
+    <string name="false_label">False</string>
+    <string name="next">Next</string>
+    <string name="stop">Stop</string>
+    <string name="choose_training_mode">Choose training mode:</string>
+    <string name="choose">Choose</string>
 </resources>

@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -34,23 +35,23 @@ fun Results(navController: NavHostController, answers: List<Int>, drawing: Int) 
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        Text(text = "Time of trenning:",
+        Text(text = stringResource(R.string.time_training),
             style = MaterialTheme.typography.bodyLarge)
         Text(text = answers[0].toString(),
             fontWeight = FontWeight.SemiBold,
             style = MaterialTheme.typography.titleLarge)
-        Text(text = "Questions:",
+        Text(text = stringResource(R.string.questions),
             style = MaterialTheme.typography.bodyLarge)
         Text(text = answers[1].toString(),
             fontWeight = FontWeight.SemiBold,
             style = MaterialTheme.typography.titleLarge)
-        Text(text = "Right answers:",
+        Text(text = stringResource(R.string.right_answers),
             style = MaterialTheme.typography.bodyLarge)
         Text(text = answers[2].toString(),
             color = Color.Green,
             fontWeight = FontWeight.SemiBold,
             style = MaterialTheme.typography.titleLarge)
-        Text(text = "Wrong answers:",
+        Text(text = stringResource(R.string.wrong_answers),
             style = MaterialTheme.typography.bodyLarge)
         Text(text = answers[3].toString(),
             fontWeight = FontWeight.SemiBold,
@@ -64,7 +65,7 @@ fun Results(navController: NavHostController, answers: List<Int>, drawing: Int) 
             contentDescription = "image")
         Spacer(modifier = Modifier.height(50.dp))
         Button(onClick = {}) {
-            Text(text = "To dictionary")
+            Text(text = stringResource(R.string.to_dictionary))
         }
     }
 }

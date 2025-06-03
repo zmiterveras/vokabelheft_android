@@ -18,6 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -25,6 +26,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zmv.vokabelheft.ui.theme.VokabelheftTheme
 import com.zmv.vokabelheft.utils.getRandomList
+import com.zmv.vokabelheft.R
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
@@ -69,13 +71,13 @@ fun ButtonsRow() {
         modifier = Modifier.fillMaxWidth()
     ) {
         Button(onClick = {}) {
-            Text(text = "Add")
+            Text(text = stringResource(R.string.add))
         }
         Button(onClick = {}) {
-            Text(text = "Training")
+            Text(text = stringResource(R.string.training))
         }
         Button(onClick = {}) {
-            Text(text = "Delete")
+            Text(text = stringResource(R.string.delete))
         }
     }
 }

@@ -1,6 +1,5 @@
 package com.zmv.vokabelheft.screens
 
-import android.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
@@ -26,6 +26,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zmv.vokabelheft.utils.getAnswer
 import com.zmv.vokabelheft.utils.getCheck
+import com.zmv.vokabelheft.R
 
 @Composable
 fun WordResult(navController: NavHostController,
@@ -38,11 +39,11 @@ fun WordResult(navController: NavHostController,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (check) {
-            Text(text = "True",
+            Text(text = stringResource(R.string.true_label),
                 color = Color.Green,
                 style = MaterialTheme.typography.headlineLarge)
         } else {
-            Text(text = "False",
+            Text(text = stringResource(R.string.false_label),
                 color = Color.Red,
                 style = MaterialTheme.typography.headlineLarge)
             Text(text = wrong,
@@ -57,18 +58,18 @@ fun WordResult(navController: NavHostController,
             style = MaterialTheme.typography.bodyLarge)
         Box(modifier = Modifier.padding(10.dp).height(1.dp).fillMaxWidth().background(Color.Black))
         if (results[3].isNotEmpty()) {
-            Text(text = "Form of verb:",
+            Text(text = stringResource(R.string.forms),
                 style = MaterialTheme.typography.bodyLarge)
             Text(text = results[3],
                 style = MaterialTheme.typography.headlineSmall)
         }
         if (results[4].isNotEmpty()) {
-            Text(text = "Plural:",
+            Text(text = stringResource(R.string.plural),
                 style = MaterialTheme.typography.bodyLarge)
             Text(text = results[4],
                 style = MaterialTheme.typography.headlineSmall)
         }
-        Text(text = "Translate:",
+        Text(text = stringResource(R.string.translate),
             style = MaterialTheme.typography.bodyLarge)
         Text(text = results[2],
             textAlign = TextAlign.Center,
@@ -78,10 +79,10 @@ fun WordResult(navController: NavHostController,
         Row(horizontalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier.fillMaxWidth()) {
             Button(onClick = {}) {
-                Text(text = "Next")
+                Text(text = stringResource(R.string.next))
             }
             Button(onClick = {}) {
-                Text(text = "Stop")
+                Text(text = stringResource(R.string.stop))
             }
         }
     }
