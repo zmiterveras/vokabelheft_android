@@ -39,7 +39,9 @@ fun TrainingSelection(navController: NavHostController, card: Boolean = false) {
             }) {
                 Text(text = stringResource(R.string.choose))
             }
-            Button(onClick = {}) {
+            Button(onClick = {
+                navController.navigate(NavRoutes.Words.route)
+            }) {
                 Text(text = stringResource(R.string.cancel))
             }
         }
