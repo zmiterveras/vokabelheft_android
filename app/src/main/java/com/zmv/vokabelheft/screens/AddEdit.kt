@@ -18,6 +18,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zmv.vokabelheft.ui.theme.VokabelheftTheme
 import androidx.compose.ui.unit.dp
+import com.zmv.vokabelheft.NavRoutes
 import com.zmv.vokabelheft.utils.getDropDownItems
 import com.zmv.vokabelheft.composables.DropDownBox
 import com.zmv.vokabelheft.R
@@ -59,7 +60,9 @@ fun AddEdit(navController: NavHostController,
             Button(onClick = {}) {
                 Text(text = stringResource(R.string.add))
             }
-            Button(onClick = {}) {
+            Button(onClick = {
+                navController.navigate(NavRoutes.Words.route)
+            }) {
                 Text(text = stringResource(R.string.cancel))
             }
         }
