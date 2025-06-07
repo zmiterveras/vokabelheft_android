@@ -29,4 +29,7 @@
     <string name="stop">Stop</string>
     <string name="choose_training_mode">Choose training mode:</string>
     <string name="choose">Choose</string>
+    <string name="ok">OK</string>
+    <string name="skip">Skip</string>
+    <string name="translate_word">Translate the word:</string>
 </resources>
