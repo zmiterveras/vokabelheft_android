@@ -14,6 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.zmv.vokabelheft.NavRoutes
 import com.zmv.vokabelheft.composables.DropDownBox
 import com.zmv.vokabelheft.R
 
@@ -33,7 +34,9 @@ fun TrainingSelection(navController: NavHostController, card: Boolean = false) {
         DropDownBox(variants)
         Row(Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly) {
-            Button(onClick = {}) {
+            Button(onClick = {
+                navController.navigate(NavRoutes.Question.route)
+            }) {
                 Text(text = stringResource(R.string.choose))
             }
             Button(onClick = {}) {
