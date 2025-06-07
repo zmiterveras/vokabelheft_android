@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -11,11 +12,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.zmv.vokabelheft.composables.DropDownBox
 import com.zmv.vokabelheft.R
 
 @Composable
-fun TrainingSelection(card: Boolean = false) {
+fun TrainingSelection(navController: NavHostController, card: Boolean = false) {
     val variants: List<String> = listOf<String>(
         "accidentally",
         "last 40",
@@ -28,7 +31,8 @@ fun TrainingSelection(card: Boolean = false) {
         horizontalAlignment = Alignment.CenterHorizontally) {
         Text(text = stringResource(R.string.choose_training_mode))
         DropDownBox(variants)
-        Row {
+        Row(Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly) {
             Button(onClick = {}) {
                 Text(text = stringResource(R.string.choose))
             }
@@ -42,5 +46,5 @@ fun TrainingSelection(card: Boolean = false) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun TrainingSelectionPreview(){
-    TrainingSelection()
+    TrainingSelection(navController = rememberNavController())
 }

@@ -118,11 +118,13 @@ fun Plural(plural: String) {
 
 @Composable
 fun ButtonsBox() {
-    Row {
+    Row(
+        Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
         Button(onClick = { }) {
             Text(text = stringResource(R.string.back))
         }
-        Spacer(modifier = Modifier.width(15.dp))
         Button(onClick = { }) {
             Text(text = stringResource(R.string.edit))
         }
