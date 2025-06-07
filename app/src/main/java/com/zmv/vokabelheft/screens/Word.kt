@@ -128,7 +128,9 @@ fun ButtonsBox(navController: NavHostController) {
         }) {
             Text(text = stringResource(R.string.back))
         }
-        Button(onClick = { }) {
+        Button(onClick = {
+            navController.navigate(NavRoutes.AddEdit.route)
+        }) {
             Text(text = stringResource(R.string.edit))
         }
     }
