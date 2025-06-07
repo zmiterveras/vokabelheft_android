@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.zmv.vokabelheft.NavRoutes
 import com.zmv.vokabelheft.ui.theme.VokabelheftTheme
 import com.zmv.vokabelheft.utils.getRandomList
 import com.zmv.vokabelheft.R
@@ -46,7 +47,7 @@ fun Words(navController: NavHostController, modifier: Modifier = Modifier) {
                 Spacer(modifier.height(10.dp))
             }
         }
-        ButtonsRow()
+        ButtonsRow(navController)
     }
 }
 
@@ -65,15 +66,19 @@ fun WordCell(textItem: String, translate: String, modifier: Modifier = Modifier)
 }
 
 @Composable
-fun ButtonsRow() {
+fun ButtonsRow(navController: NavHostController) {
     Row(
         horizontalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier.fillMaxWidth()
     ) {
-        Button(onClick = {}) {
+        Button(onClick = {
+            navController.navigate(NavRoutes.AddEdit.route)
+        }) {
             Text(text = stringResource(R.string.add))
         }
-        Button(onClick = {}) {
+        Button(onClick = {
+            navController.navigate(NavRoutes.TrainingSelection.route)
+        }) {
             Text(text = stringResource(R.string.training))
         }
         Button(onClick = {}) {
