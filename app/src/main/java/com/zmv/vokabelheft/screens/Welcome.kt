@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.zmv.vokabelheft.NavRoutes
 import com.zmv.vokabelheft.ui.theme.VokabelheftTheme
 import com.zmv.vokabelheft.R
 
@@ -35,11 +36,15 @@ fun Welcome(navController: NavHostController, modifier: Modifier = Modifier) {
 
            Spacer(modifier = modifier.height(20.dp))
 
-           Button(onClick = { }) {
+           Button(onClick = {
+               navController.navigate(NavRoutes.Words.route)
+           }) {
                Text(text = stringResource(R.string.en_button))
            }
            Spacer(modifier = modifier.height(20.dp))
-           Button(onClick = { }) {
+           Button(onClick = {
+               navController.navigate(NavRoutes.Words.route)
+           }) {
                Text(text = stringResource(R.string.de_button))
            }
        }

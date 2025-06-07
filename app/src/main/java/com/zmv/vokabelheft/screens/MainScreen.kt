@@ -17,7 +17,7 @@ fun MainScreen() {
 
     NavHost(
         navController = navController,
-        startDestination = NavRoutes.Results.route
+        startDestination = NavRoutes.Welcome.route
     ) {
         composable(NavRoutes.Welcome.route) {
             Welcome(navController = navController)
