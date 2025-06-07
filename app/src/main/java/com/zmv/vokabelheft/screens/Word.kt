@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.zmv.vokabelheft.NavRoutes
 import com.zmv.vokabelheft.R
 import com.zmv.vokabelheft.utils.getTestWord
 
@@ -55,7 +56,7 @@ fun Word(navController: NavHostController, word: List<String>, modifier: Modifie
         }
         TranslateWord(word[2])
         Spacer(modifier = modifier.height(50.dp))
-        ButtonsBox()
+        ButtonsBox(navController)
     }
 }
 
@@ -117,12 +118,14 @@ fun Plural(plural: String) {
 }
 
 @Composable
-fun ButtonsBox() {
+fun ButtonsBox(navController: NavHostController) {
     Row(
         Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
-        Button(onClick = { }) {
+        Button(onClick = {
+            navController.navigate(NavRoutes.Words.route)
+        }) {
             Text(text = stringResource(R.string.back))
         }
         Button(onClick = { }) {
